@@ -6,6 +6,7 @@ var inventory = [[36512, "Retractable banners", 40, 200.65],
                  [98745, "fishing Stickers", 600, 1.50]];
 var i;
 
+
 window.console.log("The product Inventory Management System\n\n\n\n");
 
 
@@ -22,30 +23,24 @@ function viewAllProducts() {
 //UPDATE STOCK
 function updateStock() {
     "use strict";
-    var sku = parseFloat(window.prompt("Please enter a correct sku number")), stock = window.prompt("Please enter new stock quantity");
+    var sku = parseFloat(window.prompt("Please enter a correct sku number")), stock = parseFloat(window.prompt("Please enter new stock quantity")), j;
 
     if (isNaN(sku)) {
         window.alert("Please write a valid number");
     }
-    if (sku === 36512) {
-        inventory[0].splice(2, 1, (stock));
-        return viewAllProducts();
-    } else if (sku === 55874) {
-        inventory[1].splice(2, 1, (stock));
-        return viewAllProducts();
-    } else if (sku === 12358) {
-        inventory[2].splice(2, 1, (stock));
-        return viewAllProducts();
-    } else if (sku === 55874) {
-        inventory[3].splice(2, 1, (stock));
-        return viewAllProducts();
-    } else if (sku === 87542) {
-        inventory[4].splice(2, 1, (stock));
-        return viewAllProducts();
-    } else {
-        window.console.log("Please write a valid sku.");
+    for (i = 0; i < inventory.length; i += 1) {
+    
+        for (j = 0; j < inventory[i].length; j += 1) {
+            if (sku === inventory[i][j]) {
+                inventory[i].splice(2, 1, (stock));
+                window.console.log("Inventory has been updated.");
+                window.localStorage.setItem("newInventory", inventory);
+            }
+        }
     }
+    somethingElse();
 }
+
 
 
 //EXIT THE PROGRAM
@@ -90,3 +85,4 @@ function somethingElse() {
         exitTheProgram();
     }
 }
+

@@ -164,8 +164,7 @@ window.console.log(employees[1]["name"]);
 
 //STEP 14
 
-/*
-var employee1 = [];
+/* var employee1 = [];
 var employee2 = [];
 var employees = [];
 var string1 = "";
@@ -181,14 +180,12 @@ employee2["name"]       = "Jane Diaz";
 employee2["title"]      = "Hiring Manager";
 employee2["department"] = "Human Resources";
 employee2["isCurrent"]  = true;
-
 employees = [employee1, employee2];
 
 employees.forEach(function (item) {
     "use strict";
     window.console.log(item["name"]);
-});
-*/
+});*/
 
 
 //STEP 15
@@ -232,19 +229,18 @@ employees.forEach(function (item) {
 //STEP 16
 
 //STILL WORKING ON THIS ONE
-/*
-var movieRanking = [["The Gladiator", 1], ["Captain America", 2], ["Troy", 3], ["Twister", 4], ["Princess Diaries", 5]];
-var i;
 
-movieRanking.filter(function (findTitle, self) {
+/*var movieRanking = [["The Gladiator", 1], ["Captain America", 2], ["Troy", 3], ["Twister", 4], ["Princess Diaries", 5]];
+var i, j;
+
+movieRanking.filter(function () {
     "use strict";
-    window.console.log(self.indexOf(findTitle));
+    for (i = 0; i < movieRanking.length; i += 1) {
+        for (j = 0; j < movieRanking[i]; j += 1) {
+            window.console.log(movieRanking[i][j]);
+        }
     }
-);
-*/
-
-
-
+});*/
 
 
 //STEP 17
@@ -261,11 +257,10 @@ window.console.log("Employees: \n\n\n");
 showEmployee(employees);
 */
 
+
 //STEP 18
-
-// filter false, null, 0 and blank
-
 /*
+
 function filtering(value) {
     "use strict";
     if (value !== false || value !== null || value !== 0 || value !== "") {
@@ -273,13 +268,13 @@ function filtering(value) {
     }
 }
 
-function filter_array_values(arr) {
+function filterArrayValues(arr) {
     "use strict";
     arr = arr.filter(filtering);
     return arr;
 }
-
-window.console.log(filter_array_values([58, '', 'abcd', true, null, false, 0]));*/
+window.console.log(filterArrayValues([58, '', 'abcd', true, null, false, 0]));
+*/
 
 
 //STEP 19
@@ -296,13 +291,16 @@ arrRandom();*/
 
 //STEP 20
 
-//Write a JavaScript function to get the largest number from a numeric array.
-
-var arr = [1, 6, 10, 25, 9, 60, 652, 125, 856, 745, 007, 74];
+/*var arr = [1, 6, 10, 25, 9, 60, 652, 125, 856, 745, 1007, 74];
 
 function largestNum() {
     "use strict";
-    for(var i = 0; i < arr.length; i+=){
-        if ()
-        } 
+    var i, x = 0;
+    for (i = 0; i < arr.length; i += 1) {
+        if (x < arr[i]) {
+            x = arr[i];
+        }
+    }
+    window.console.log("The largest number is: " + x);
 }
+largestNum(arr);*/
